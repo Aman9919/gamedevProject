@@ -17,4 +17,8 @@ public class TownButtonHandler : MonoBehaviour
     public void BountyOne(){
         SceneManager.LoadScene("Combat-grassland");
     }
+    public void quitGame(){
+       // Debug.Log("Button works, quit to come when a game actually exists");
+        Application.Quit();
+    }
 }
