@@ -15,15 +15,15 @@ public class Player : MonoBehaviour
     [SerializeField] private List<AnimationChanger> animationStateChanger;
      [Header("Data")]
     [SerializeField]  Vector3 homepos;
-    [SerializeField] GameObject box;
     Rigidbody2D rb;
-    
+    public WSLoader loader;
     // Start is called before the first frame update
     void Start()
     {
         homepos = new Vector3(0,0,0);
         rb =GetComponent<Rigidbody2D>();
-        
+        PlayerESI stats = GameObject.Find("PlayerESI").GetComponent<PlayerESI>();
+        loader.weaponSwap(stats.equippedWeapon);
     }
 
     // Update is called once per frame

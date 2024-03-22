@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    public string name;
+    public new string name;
     public int damage;
     public int maxHealth;
     public int currHealth;

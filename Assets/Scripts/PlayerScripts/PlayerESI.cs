@@ -8,6 +8,8 @@ public class PlayerESI : MonoBehaviour
     [Header("Stats")]
     [SerializeField] public int health = 25;
     [SerializeField] public string PlayerName = "Andrew";
+    [SerializeField] public string equippedWeapon="Crowbar";
+    [SerializeField] public int spareParts = 0;
     public void Awake(){
         if(Instance!=null)
         {
