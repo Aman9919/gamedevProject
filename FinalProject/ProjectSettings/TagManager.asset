@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: HiddenUI
+    uniqueID: 3280330587
+    locked: 0
   - name: Background
     uniqueID: 3025610905
     locked: 0
@@ -46,4 +49,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2639891825
+    locked: 0
+  - name: UI
+    uniqueID: 2422228457
     locked: 0
