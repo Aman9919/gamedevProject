@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public enum CombatState {  START, PLAYERTURN, ENEMYTURN, WON, LOST  }
-public class CombatHandler : MonoBehaviour
+public class CombatHandlerDesert : MonoBehaviour
 {
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
@@ -38,8 +37,12 @@ public class CombatHandler : MonoBehaviour
         enemyUI.SetUp(enemyUnit);
         playerUnit.UI=playerUI;
         enemyUnit.UI=enemyUI;
+
+
         //Debug.Log(playerUnit.damage);
         yield return new WaitForSeconds(2f);
+        playerUI.HarshSun();
+        playerUnit.addRust(1);
         state=CombatState.PLAYERTURN;
         PlayerTurn();
     }
@@ -75,14 +78,6 @@ public class CombatHandler : MonoBehaviour
     void PlayerTurn()
     {
     }
-    public void onAttack()
-    {
-        if(state != CombatState.PLAYERTURN)
-            return;
-        //Debug.Log(playerUnit.damage);
-        state=CombatState.ENEMYTURN;
-        StartCoroutine(PlayerAttack());
-    }
     public void onSpecial()
     {
         if(state != CombatState.PLAYERTURN)
@@ -90,6 +85,14 @@ public class CombatHandler : MonoBehaviour
         //Debug.Log(playerUnit.damage);
         state=CombatState.ENEMYTURN;
         StartCoroutine(PlayerSpecial());
+    }
+    public void onAttack()
+    {
+        if(state != CombatState.PLAYERTURN)
+            return;
+        //Debug.Log(playerUnit.damage);
+        state=CombatState.ENEMYTURN;
+        StartCoroutine(PlayerAttack());
     }
     public void onHeal()
     {
@@ -150,10 +153,6 @@ public class CombatHandler : MonoBehaviour
             }
         isDead = playerUnit.TakeDamage(enemyUnit.damage);
         playerUI.SetHealth(playerUnit.currHealth);
-        if(enemyUnit.rust >0){
-            playerUnit.addRust(enemyUnit.rust);
-            playerUI.RustText();
-        }
         timer = 0;
         while (timer < .5f){
             yield return null;
@@ -191,7 +190,10 @@ public class CombatHandler : MonoBehaviour
             return;
         }
         state=CombatState.PLAYERTURN;
+        playerUI.HarshSun();
+        playerUnit.addRust(1);
         PlayerTurn();
+        
         
     }
     IEnumerator PlayerHeal(){

@@ -68,6 +68,14 @@ public class TownButtonHandler : MonoBehaviour
         stats.MonsterToFight="Cycleclops";
         SceneManager.LoadScene("Combat-grassland");
     }
+    public void BountyThree(){
+        stats.MonsterToFight="Enemy";
+        SceneManager.LoadScene("Combat-desert");
+    }
+    public void BountyFour(){
+        stats.MonsterToFight="Nursebot";
+        SceneManager.LoadScene("Combat-grassland");
+    }
     public void quitGame(){
        // Debug.Log("Button works, quit to come when a game actually exists");
         Application.Quit();

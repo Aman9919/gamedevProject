@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 198345441}
   - component: {fileID: 198345440}
   m_Layer: 0
-  m_Name: TestBG_Grass
+  m_Name: TestBG_Sand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -358,7 +358,7 @@ SpriteRenderer:
   m_SortingLayerID: -1269356391
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c548969c151938e419218983ef81fe1b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6996a93e5af20cf4c9ae9847b1b6dcc4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15701,8 +15701,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1145848608}
-        m_TargetAssemblyTypeName: CombatHandler, Assembly-CSharp
+      - m_Target: {fileID: 1145848610}
+        m_TargetAssemblyTypeName: CombatHandlerDesert, Assembly-CSharp
         m_MethodName: onAttack
         m_Mode: 1
         m_Arguments:
@@ -16198,7 +16198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1145848609}
-  - component: {fileID: 1145848608}
+  - component: {fileID: 1145848610}
   m_Layer: 0
   m_Name: CombatHandler
   m_TagString: Untagged
@@ -16206,28 +16206,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1145848608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1145848607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc3e363b1c80fb54eba9ef598fb26b85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 1858473821606218113, guid: 07b0d6521062fb348b6bf93efeb02a3e, type: 3}
-  enemyPrefab: {fileID: 7057292795025763679, guid: c07ecdcb7ad85744b81064bcf83a9a1a, type: 3}
-  playerStart: {fileID: 826320383}
-  enemyStart: {fileID: 610944289}
-  enemyUI: {fileID: 2070453908}
-  playerUI: {fileID: 1713553572}
-  state: 0
-  startStats: {fileID: 1766269012}
-  endScreen: {fileID: 468716082}
-  end: {fileID: 1916876827}
 --- !u!4 &1145848609
 Transform:
   m_ObjectHideFlags: 0
@@ -16243,6 +16221,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1145848610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145848607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 243cdb0d0782cfa48a27ecdd64b46a4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 1858473821606218113, guid: 07b0d6521062fb348b6bf93efeb02a3e, type: 3}
+  enemyPrefab: {fileID: 7057292795025763679, guid: c07ecdcb7ad85744b81064bcf83a9a1a, type: 3}
+  playerStart: {fileID: 826320383}
+  enemyStart: {fileID: 610944289}
+  enemyUI: {fileID: 2070453908}
+  playerUI: {fileID: 1713553572}
+  state: 0
+  startStats: {fileID: 1766269012}
+  endScreen: {fileID: 468716082}
+  end: {fileID: 1916876827}
 --- !u!1 &1158030757
 GameObject:
   m_ObjectHideFlags: 0
@@ -21495,8 +21495,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1145848608}
-        m_TargetAssemblyTypeName: CombatHandler, Assembly-CSharp
+      - m_Target: {fileID: 1145848610}
+        m_TargetAssemblyTypeName: CombatHandlerDesert, Assembly-CSharp
         m_MethodName: onHeal
         m_Mode: 1
         m_Arguments:
@@ -21770,8 +21770,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1145848608}
-        m_TargetAssemblyTypeName: CombatHandler, Assembly-CSharp
+      - m_Target: {fileID: 1145848610}
+        m_TargetAssemblyTypeName: CombatHandlerDesert, Assembly-CSharp
         m_MethodName: onSpecial
         m_Mode: 1
         m_Arguments:

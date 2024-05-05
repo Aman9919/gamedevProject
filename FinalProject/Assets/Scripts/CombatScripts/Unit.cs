@@ -38,6 +38,15 @@ public class Unit : MonoBehaviour
     public void addRust(int num){
         rustCounter +=num;
     }
+    public void Special(int value){
+        if(currHealth<maxHealth && currHealth < maxHealth-value){
+            currHealth+=value;
+        }
+        else if (currHealth<maxHealth)
+        {
+            currHealth+=maxHealth-currHealth;
+        }
+    }
     public bool Rust(){
         if(rustCounter > 0)
         {

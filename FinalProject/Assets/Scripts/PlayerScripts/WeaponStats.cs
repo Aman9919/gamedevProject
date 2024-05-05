@@ -14,7 +14,6 @@ public class WeaponStats : MonoBehaviour
     public int rust=0;
     public WeaponStats(){
         Modifiers=new string[6];
-        Modifiers[0]="test";
     }
     public void randomModifiersRare(){
         Modifiers=new string[6];

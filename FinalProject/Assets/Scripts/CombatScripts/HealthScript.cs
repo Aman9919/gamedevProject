@@ -95,6 +95,32 @@ public class HealthScript : MonoBehaviour
         }
     
     }
+    public void HarshSun(){
+        positionY = rustText.transform.localPosition.y;
+        positionX = rustText.transform.localPosition.x;
+        int i = 0;
+        for(i = 0; i < 10; i++){
+            if(popUps[i].IsActive() == false){
+                popUps[i].gameObject.SetActive(true);
+                popUps[i].transform.position.Set(positionX,positionY,0);
+                popUps[i].text="The sun beats down...";
+                break;
+            }
+        }
+        rustParticles.Play();
+        StartCoroutine(fade());
+        IEnumerator fade(){
+            float timer = 0;
+         while (timer < 1f){
+            yield return null;
+            timer+=Time.deltaTime;
+            popUps[i].color=Color.Lerp(new Color(166, 77, 10,1),new Color(166, 77, 10,0),timer/1f);
+            popUps[i].transform.localPosition=Vector3.Lerp(new Vector3(positionX,positionY,0),new Vector3(positionX,positionY+40,0),timer/1f);
+            }
+            popUps[i].transform.localPosition=new Vector3(positionX,positionY,0);
+            popUps[i].gameObject.SetActive(false);
+        }
+    }
     public void RustDamageTaken(){
         rustParticles.Play();
     }

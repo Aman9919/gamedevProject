@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Combat-grassland.unity
     guid: e132f1db30ff45a448fc7843bcc240a0
+  - enabled: 1
+    path: Assets/Scenes/Combat-desert.unity
+    guid: 70c5b68364396c14c9fe9befbe37507d
   m_configObjects: {}

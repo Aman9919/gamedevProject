@@ -34,4 +34,11 @@ public class PlayerESI : MonoBehaviour
         }
         //Debug.Log(damage);
     }
+    public void setHealth(float multiplier){
+        health = (int)(multiplier*25);
+    }
+    public void setDamage(float multiplier){
+        Crowbardmg =(int)(multiplier*5);
+        Blunderbussdmg = (int)(multiplier*7);
+    }
 }
