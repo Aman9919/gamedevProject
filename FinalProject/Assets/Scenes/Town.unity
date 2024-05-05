@@ -656,7 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Modifiers:
-  - test
+  - 
   - 
   - 
   - 
@@ -2462,7 +2462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Modifiers:
-  - test
+  - 
   - 
   - 
   - 
