@@ -2364,7 +2364,7 @@ MonoBehaviour:
   optionsMenu: {fileID: 1452489393}
   volumeMasterSlider: {fileID: 22105656}
   mixerMaster: {fileID: 24100000, guid: e0341124ca777b248ba74dc9b6718350, type: 2}
-  volumeMusicSlider: {fileID: 0}
+  volumeMusicSlider: {fileID: 1999465797}
 --- !u!4 &1817641671
 Transform:
   m_ObjectHideFlags: 0
