@@ -14,6 +14,10 @@ public class Options : MonoBehaviour
     public TextMeshProUGUI multiplierText;
     public TextMeshProUGUI multiplierTextDamage;
     public PlayerESI playerStats;
+    void Start()
+    {
+        playerStats=GameObject.Find("PlayerESI").GetComponent<PlayerESI>();
+    }
     float ConvertToDev(float value){
         return Mathf.Log10(Mathf.Max(value,0.0001f))*20;
     }
